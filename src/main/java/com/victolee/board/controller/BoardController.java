@@ -1,6 +1,7 @@
 package com.victolee.board.controller;
 
-import com.victolee.board.dto.BoardDto;
+import com.victolee.board.domain.dto.BoardDto;
+import com.victolee.board.domain.dto.BoardDto;
 import com.victolee.board.service.BoardService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @AllArgsConstructor
 
 public class BoardController {
-    private BoardController boardController;
+    private BoardService boardService;
 
         @GetMapping("/")
         public String list() {

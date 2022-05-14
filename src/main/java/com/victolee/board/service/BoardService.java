@@ -1,6 +1,8 @@
 package com.victolee.board.service;
 
 
+import com.victolee.board.domain.dto.BoardDto;
+import com.victolee.board.domain.repository.BoardRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +14,7 @@ public class BoardService {
     private BoardRepository boardRepository;
 
     @Transactional
-    public long savePost(BoardDto boardDto) {
-        return boardRepository.save(boardDto.toEntity()).getid();
+    public Long savePost(BoardDto boardDto) {
+        return boardRepository.save(boardDto.toEntity()).getId();
     }
 }
