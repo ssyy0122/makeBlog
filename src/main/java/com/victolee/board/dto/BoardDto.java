@@ -1,4 +1,4 @@
-package com.victolee.board.domain.dto;
+package com.victolee.board.dto;
 
 import com.victolee.board.domain.entity.BoardEntity;
 import lombok.*;
