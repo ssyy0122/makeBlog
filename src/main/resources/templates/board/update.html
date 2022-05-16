@@ -9,9 +9,15 @@
     <input type="hidden" name="_method" value="put"/> //Restful API작성을 위하고 컨토를로에서 put메서드로 매핑이 된다.
     <input type="hidden" name="id" th:value="${boardDto.id}"/>
 
-    제목 : <input type="text" name="title" th:value="${boardDto.title}"> <br>
-    작성자 : <input type="text" name="writer" th:value="${boardDto.writer}"> <br>
-    <textarea name="content" th:text="${boardDto.content}"></textarea><br>
+    제목 : <label>
+    <input type="text" name="title" th:value="${boardDto.title}">
+</label> <br>
+    작성자 : <label>
+    <input type="text" name="writer" th:value="${boardDto.writer}">
+</label> <br>
+    <label>
+        <textarea name="content" th:text="${boardDto.content}"></textarea>
+    </label><br>
 
     <input type="submit" value="수정">
 </form>
