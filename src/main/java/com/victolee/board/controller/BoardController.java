@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import java.util.List;
+@SuppressWarnings("ALL")
 @Controller
 @AllArgsConstructor
 public class BoardController {
@@ -31,7 +30,7 @@ public class BoardController {
         return "board/update.html";
     }
     @PostMapping("/post/edit/{no}")
-    public String update(BoardDto boardDTO) {
+    public String update(BoardDto boardDTO, @PathVariable String no) {
         boardService.savePost(boardDTO);
 
         return "redirect:/";

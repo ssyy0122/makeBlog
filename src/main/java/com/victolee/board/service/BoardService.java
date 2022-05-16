@@ -4,12 +4,12 @@ import com.victolee.board.domain.entity.BoardEntity;
 import com.victolee.board.domain.repository.BoardRepository;
 import com.victolee.board.dto.BoardDto;
 import lombok.AllArgsConstructor;
-import lombok.Setter;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.Optional;
 
+@SuppressWarnings("ALL")
 @AllArgsConstructor
 @Service
 public class BoardService {
