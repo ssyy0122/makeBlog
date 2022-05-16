@@ -1,6 +1,5 @@
 package com.victolee.board.domain.entity;
 
-
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -14,11 +13,11 @@ import java.time.LocalDateTime;
 @Getter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public class TimeEntity {
-    @CreatedDate //Entity가 처음 저장될때 생성일을 주입하는 어노테이션
+public abstract class TimeEntity {
+    @CreatedDate
     @Column(updatable = false)
     private LocalDateTime createdDate;
 
     @LastModifiedDate
-    private  LocalDateTime modifiedDate;
+    private LocalDateTime modifiedDate;
 }

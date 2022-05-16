@@ -21,17 +21,18 @@ public class BoardDto {
         BoardEntity boardEntity = BoardEntity.builder()
                 .id(id)
                 .writer(writer)
-                .tiltle(title)
+                .title(title)
                 .content(content)
                 .build();
         return boardEntity;
     }
+
     @Builder
-    public BoardDto(Long id,String title,String content,String writer, LocalDateTime createdDate,LocalDateTime modifiedDate){
+    public BoardDto(Long id, String title, String content, String writer, LocalDateTime createdDate, LocalDateTime modifiedDate) {
         this.id = id;
         this.writer = writer;
-        this.content = content;
         this.title = title;
+        this.content = content;
         this.createdDate = createdDate;
         this.modifiedDate = modifiedDate;
     }
